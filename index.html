@@ -1,19 +1,45 @@
-!dochtml>
 <html>
-<title>JW 링트 전송용 사이트</title>
-<head>
-    <meta charset="utf-8"/>
-    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
-</head>
-<body>
-<h1>JW 링크 전송하기<br>
 
-   <a id="kakao-link-btn">
-     <img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png" width="195" height="195" style="max-width: 500%; height: auto;"> 
-   </a> 전송버튼</h1>
-	<script type='text/javascript'> 
-  	  Kakao.init('bbc1417aa2202bb2b0d3c71b303926cb');
-	  Kakao.Link.createCustomButton({container: '#kakao-link-btn', templateId: 60809 ,});
-	</script>
+<head>
+  <meta charset="UTF-8">
+  <title>Discord Rem Comunity</title>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<script>
+  const API = "https://cdn.discordapp.com/attachments/869455191710257192/912216587312975872/KakaoTalk_20210724_164006437_03.gif";
+  $.getJSON(API)
+    .then(output => {
+      document.getElementById("profile").src = `${output.url}`;
+    });
+</script>
+
+<body>
+  <div id="container">
+    <div id="inviteContainer">
+      <div class="logoContainer"><img class="box" id="guild"
+          src="https://cdn.discordapp.com/attachments/869455191710257192/912216587312975872/KakaoTalk_20210724_164006437_03.gif" /><img>
+      </div>
+      <div class="acceptContainer">
+        <form>
+          <h1>Discord Rem Comunity</h1>
+          <div class="serverInfo">
+            <div class="img"><img id="profile"
+                src='https://cdn.discordapp.com/attachments/869455191710257192/912216587312975872/KakaoTalk_20210724_164006437_03.gif'></div>
+            <p><span class="server">! レムリン has invited you to join</span></p>
+          </div>
+          <a href="https://discord.gg/g47DJ99GR8" class="acceptBtn">Accept Invite</a>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script type="" src="./js/script.js"></script>
+
 </body>
+
 </html>
+
